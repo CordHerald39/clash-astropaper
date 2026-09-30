@@ -1,7 +1,635 @@
 {
-  "updated": "2026-09-30",
-  "note": "机场推荐内容由本站编辑维护。",
-  "providers": [],
+  "updated": "2026-10-01",
+  "note": "按本站维护的品牌套餐资料整理，价格与权益以对应网站结算页面为准。",
+  "providers": [
+    {
+      "id": "yinghuamao",
+      "name": "樱花猫",
+      "url": "https://yinghuamao.com.cn/",
+      "summary": "樱花猫从每月100GB开始，按你的用量选择100GB月付9.9元、300GB19.9元或600GB35.9元套餐。电脑与手机分别安装客户端，跟着教程完成第一次订阅导入。",
+      "scenario": "轻度浏览选100GB，日常视频选300GB，高流量下载选600GB的用量场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻盈",
+          "price": 9.9,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 19.9,
+          "billing": "月付",
+          "traffic": "300 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 35.9,
+          "billing": "月付",
+          "traffic": "600 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "lingdianyun",
+      "name": "零点云",
+      "url": "https://lingdianyun.com.cn/",
+      "summary": "零点云120GB月付12元、350GB24元、700GB42元三档月度流量，覆盖3、5、8台设备同时使用的不同需求。按设备分别配置，把订阅更新与连接排查整理清楚。",
+      "scenario": "3台设备轻度使用选120GB，5台日常需求选350GB，8台高流量选700GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "START",
+          "price": 12,
+          "billing": "月付",
+          "traffic": "120 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "PLUS",
+          "price": 24,
+          "billing": "月付",
+          "traffic": "350 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "PRO",
+          "price": 42,
+          "billing": "月付",
+          "traffic": "700 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "gwshudong",
+      "name": "GW树洞",
+      "url": "https://gwshudong.com.cn/",
+      "summary": "GW树洞按家庭设备与日常用量选择150GB月付15元、400GB29元或800GB49元月度流量。电脑、手机和路由器的配置各有不同，先选设备，再完成订阅与连接检查。",
+      "scenario": "个人轻度选150GB幼苗，家庭日常选400GB枝叶，全家高流量选800GB森林的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "幼苗",
+          "price": 15,
+          "billing": "月付",
+          "traffic": "150 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "枝叶",
+          "price": 29,
+          "billing": "月付",
+          "traffic": "400 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "森林",
+          "price": 49,
+          "billing": "月付",
+          "traffic": "800 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "kkningmeng",
+      "name": "快柠檬",
+      "url": "https://kkningmeng.com.cn/",
+      "summary": "快柠檬从100GB到600GB，按月度用量挑选9元100GB、18元300GB、32元600GB套餐。下载适合设备的客户端，保存订阅并完成首次连接，让每一步都有明确说明。",
+      "scenario": "轻度个人选100GB鲜柠，日常办公选300GB青柠，高流量家庭选600GB满柠的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "鲜柠",
+          "price": 9,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "青柠",
+          "price": 18,
+          "billing": "月付",
+          "traffic": "300 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "满柠",
+          "price": 32,
+          "billing": "月付",
+          "traffic": "600 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "zhyyjc",
+      "name": "一元机场",
+      "url": "https://zhyyjc.com.cn/",
+      "summary": "一元机场¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "偶尔使用选10GB轻量，每天上网选100GB日常，多设备需求选250GB畅享的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "kuailiangwfby",
+      "name": "快连",
+      "url": "https://kuailiangwfby.com.cn/",
+      "summary": "快连¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "临时查询选10GB轻量，日常浏览选100GB，家庭共享选250GB的用量场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "yinghuayun",
+      "name": "樱花云",
+      "url": "https://yinghuayun.com.cn/",
+      "summary": "樱花云¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "偶尔上网选10GB，每天视频选100GB日常，多设备畅享选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "feiniaoyungw",
+      "name": "飞鸟云",
+      "url": "https://feiniaoyungw.com.cn/",
+      "summary": "飞鸟云¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "临时查资料选10GB轻量，日常社交选100GB，高流量家庭选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "hcxiaohuojian",
+      "name": "小火箭",
+      "url": "https://hcxiaohuojian.com.cn/",
+      "summary": "小火箭¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "轻度临时选10GB，日常娱乐选100GB，多设备需求选250GB畅享的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "hongxingyuncn",
+      "name": "红杏云",
+      "url": "https://hongxingyuncn.com.cn/",
+      "summary": "红杏云¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "偶尔使用选10GB，每天浏览选100GB日常，家庭高流量选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "qingyunti",
+      "name": "青云梯",
+      "url": "https://qingyunti.com.cn/",
+      "summary": "青云梯¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "轻量入门选10GB临时，日常需求选100GB，畅享多设备选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "nnaiyun",
+      "name": "奈云",
+      "url": "https://nnaiyun.com.cn/",
+      "summary": "奈云¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "临时上网选10GB，日常视频选100GB，家庭共享选250GB畅享的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "1fenjichang",
+      "name": "一分机场",
+      "url": "https://1fenjichang.com.cn/",
+      "summary": "一分机场¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "偶尔查询选10GB轻量，每天使用选100GB，多设备畅享选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "dogdogjiasu",
+      "name": "狗狗加速",
+      "url": "https://dogdogjiasu.com.cn/",
+      "summary": "狗狗加速¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "轻度临时选10GB，日常办公选100GB，高流量家庭选250GB的用量场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "shandianjsq",
+      "name": "闪电加速器",
+      "url": "https://shandianjsq.com.cn/",
+      "summary": "闪电加速器¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "临时使用选10GB，日常浏览选100GB日常，多设备需求选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "keleyun",
+      "name": "可乐云",
+      "url": "https://keleyun.com.cn/",
+      "summary": "可乐云¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "偶尔上网选10GB轻量，每天社交选100GB，家庭畅享选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "xsuscn",
+      "name": "XSUS",
+      "url": "https://xsuscn.com.cn/",
+      "summary": "XSUS¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "轻量入门选10GB临时查询，日常需求选100GB，畅享250GB多设备的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "wgetcloud1",
+      "name": "WgetCloud",
+      "url": "https://wgetcloud1.com.cn/",
+      "summary": "WgetCloud¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "临时查资料选10GB，日常娱乐选100GB，高流量共享选250GB的场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    },
+    {
+      "id": "shandiancat",
+      "name": "闪电猫",
+      "url": "https://shandiancat.com.cn/",
+      "summary": "闪电猫¥1/月起，10GB轻量入门，5元100GB与10元250GB满足更多日常需求。先看清流量与计费规则，再按设备下载客户端、导入订阅并验证连接。",
+      "scenario": "偶尔使用选10GB轻量，每天上网选100GB，多设备畅享选250GB的用量场景。",
+      "updated": "2026-10-01",
+      "plans": [
+        {
+          "name": "轻量",
+          "price": 1,
+          "billing": "月付",
+          "traffic": "10 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "日常",
+          "price": 5,
+          "billing": "月付",
+          "traffic": "100 GB/月",
+          "reset": "每月重置"
+        },
+        {
+          "name": "畅享",
+          "price": 10,
+          "billing": "月付",
+          "traffic": "250 GB/月",
+          "reset": "每月重置"
+        }
+      ],
+      "source": "品牌套餐资料",
+      "coupon": null
+    }
+  ],
   "faq": [
     {
       "q": "Clash 客户端和机场订阅是什么关系？",
