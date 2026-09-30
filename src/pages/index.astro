@@ -7,7 +7,7 @@ import Card from "@/components/Card.astro";
 import {getSortedPosts} from "@/utils/getSortedPosts";
 import {getAssetPath as url} from "@/utils/withBase";
 const posts=getSortedPosts(await getCollection('posts'));
-const topics=[['official/','官网入口','开发者仓库与发行来源'],['mobile/','手机版','Android 安装与连接'],['desktop/','电脑版','Windows 安装与配置'],['tutorials/','使用教程','订阅、规则与故障排查'],['recommend/','机场推荐','套餐、流量与优惠条件']];
+const topics=[['official/','官网入口','开发者仓库与发行来源'],['mobile/','手机版','Android 安装与连接'],['desktop/','电脑版','Windows 安装与配置'],['tutorials/','使用教程','订阅、规则与故障排查'],['recommend/','机场推荐','选购要点与订阅配置']];
 ---
 <Layout title="Clash 中文网｜软件下载与配置教程"><Header/><main id="main-content">
 <section class="search-hero"><div class="shell hero-inner"><p class="hero-kicker">Clash 中文知识书架</p><h1>Clash 中文网<br/>软件下载与配置教程</h1><p class="hero-description">从开发者发布源找到客户端，按设备读懂安装、订阅和代理设置。</p><form class="knowledge-search" action={url('search/')} role="search"><label class="sr-only" for="knowledge-query">搜索 Clash 教程</label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="knowledge-query" name="q" type="search" placeholder="输入问题，例如：订阅导入、系统代理"/><button type="submit">搜索</button></form><div class="search-hints"><span>常用检索</span><a href={url('search/?q=订阅')}>订阅导入</a><a href={url('search/?q=规则')}>规则模式</a><a href={url('search/?q=连接')}>连接排查</a></div></div></section>
