@@ -1,0 +1,12 @@
+---
+import config from "@/config";
+import {getAssetPath} from "@/utils/withBase";
+import IconMoon from "@/assets/icons/IconMoon.svg";
+import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
+const items=[["official/","官网入口"],["download/","下载"],["mobile/","手机版"],["desktop/","电脑版"],["tutorials/","教程"],["posts/","博客"]];
+---
+<a href="#main-content" class="sr-only focus:not-sr-only">跳至正文</a>
+<header class="app-layout border-border border-b py-6">
+ <div class="flex items-center justify-between"><a href={getAssetPath("")} class="text-2xl font-semibold">{config.site.title}</a><div class="flex gap-4 items-center"><a href={getAssetPath("search/")}>搜索</a><button id="theme-btn" title="切换明暗主题" aria-label="切换明暗主题" class="relative size-11"><IconMoon class="absolute top-2 left-2 dark:hidden"/><IconSunHigh class="absolute top-2 left-2 hidden dark:block"/></button></div></div>
+ <nav aria-label="主要导航" class="mt-4 flex flex-wrap gap-x-5 gap-y-2">{items.map(([url,title])=><a href={getAssetPath(url)} class="py-2 hover:text-accent">{title}</a>)}</nav>
+</header>

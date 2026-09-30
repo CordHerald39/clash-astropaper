@@ -1,0 +1,5 @@
+---
+import {getAssetPath} from "@/utils/withBase";
+const {noMarginTop=false,...attrs}=Astro.props;
+---
+<footer class="app-layout mt-auto border-border border-t py-6 text-sm" {...attrs}><nav class="flex flex-wrap gap-5" aria-label="页脚导航"><a href={getAssetPath("about/")}>关于本站</a><a href={getAssetPath("privacy/")}>隐私说明</a><a href={getAssetPath("rss.xml")}>RSS 订阅</a><a href="https://github.com/CordHerald39/clash-astropaper">网站仓库</a></nav><p class="mt-4">© {new Date().getFullYear()} Clash 书签 · 基于 <a href="https://github.com/satnaing/astro-paper">AstroPaper</a></p></footer>

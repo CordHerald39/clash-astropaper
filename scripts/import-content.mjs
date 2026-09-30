@@ -1,0 +1,21 @@
+import {readFile,writeFile,rename,mkdir,unlink} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const input=process.argv[2];if(!input)throw Error('Usage: node scripts/import-content.mjs <JSON-file>');
+const data=JSON.parse(await readFile(path.resolve(input),'utf8'));
+for(const key of ['id','slug','title','description','category','body'])if(typeof data[key]!=='string'||!data[key].trim())throw Error('Required string: '+key);
+if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.slug))throw Error('Invalid safe slug');
+if(!['published','draft'].includes(data.status))throw Error('Invalid status');
+const iso=value=>{if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z)?$/.test(value)||!Number.isFinite(Date.parse(value)))throw Error('Invalid ISO date');const result=new Date(value).toISOString();if(result.slice(0,10)!==value.slice(0,10))throw Error('Invalid calendar date');return result;};
+const pub=iso(data.publishedAt),mod=iso(data.updatedAt);if(mod<pub)throw Error('updatedAt predates publishedAt');
+if(!Array.isArray(data.tags)||data.tags.some(x=>typeof x!=='string'||!x.trim()))throw Error('tags must be string array');
+if(!Array.isArray(data.sources))throw Error('sources must be array');
+const sources=data.sources.map(s=>{if(typeof s.title!=='string'||!s.title.trim())throw Error('Invalid source title');const u=new URL(s.url);if(!['https:','http:'].includes(u.protocol)||u.username||u.password)throw Error('Invalid source URL');return `- [${s.title.replace(/[\[\]\r\n]/g,' ')}](${u.href.replace(/\)/g,'%29')})`;});
+const quote=s=>JSON.stringify(s);
+const front=`---\ntitle: ${quote(data.title)}\ndescription: ${quote(data.description)}\npubDatetime: ${pub}\nmodDatetime: ${mod}\nauthor: Clash 书签编辑部\ndraft: ${data.status==='draft'}\ntags: ${JSON.stringify([...new Set([data.category,...data.tags])])}\n---\n\n`;
+const body=data.body.trim()+(sources.length?'\n\n## 参考来源\n\n'+sources.join('\n'):'')+'\n';
+const dir=path.join(root,'src/content/posts');await mkdir(dir,{recursive:true});const dest=path.join(dir,data.slug+'.md');if(path.dirname(dest)!==dir)throw Error('Unsafe target');
+const temp=dest+'.'+process.pid+'.tmp';
+try{await writeFile(temp,front+body,{encoding:'utf8',flag:'wx'});await rename(temp,dest);}catch(error){await unlink(temp).catch(()=>{});throw error;}
+console.log(JSON.stringify({id:data.id,slug:data.slug,status:data.status,path:path.relative(root,dest)}));
