@@ -2,7 +2,6 @@
 
 import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath } from "@/utils/withBase";
 import config from "@/config";
 import "@/styles/global.css";
@@ -19,11 +18,11 @@ const { site } = config;
 const {
   title = site.title,
   description = title === site.title ? site.description : `${title}。浏览 Clash 中文下载指引、配置文章与相关主题。`,
-  ogImage = resolveDefaultOgImagePath(config),
+  ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
-const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
+const socialImageURL = ogImage ? new URL(ogImage, Astro.site ?? Astro.url) : undefined;
 const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
   "rss.xml"
@@ -61,14 +60,14 @@ const rssHref = getRelativeLocaleUrl(
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={socialImageURL} />
+    {socialImageURL && <meta property="og:image" content={socialImageURL} />}
 
     <!-- Twitter / X -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:card" content={socialImageURL ? "summary_large_image" : "summary"} />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    {socialImageURL && <meta property="twitter:image" content={socialImageURL} />}
 
     <!-- RSS autodiscovery -->
     <link

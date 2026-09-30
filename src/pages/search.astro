@@ -110,7 +110,7 @@ const t = useTranslations(locale);
       searchInput?.addEventListener("input", resetSearchParam);
       clearButton?.addEventListener("click", resetSearchParam);
 
-      function resetSearchParam(e: Event) {
+      function resetSearchParam() {
         if ((document.querySelector(".pagefind-ui__search-input") as HTMLInputElement)?.value?.trim() === "") {
           history.replaceState(history.state, "", window.location.pathname);
         }
