@@ -7,4 +7,4 @@ import Main from "@/components/Main.astro";
 export async function getStaticPaths(){return (await getCollection("pages")).filter(p=>p.id!=="about").map(p=>({params:{guide:p.id},props:{entry:p}}));}
 const {entry}=Astro.props;const {Content}=await render(entry);
 ---
-<Layout title={`${entry.data.title} | Clash 书签`} description={entry.data.description}><Header/><Main pageTitle={entry.data.title} class="app-prose"><Content/></Main><Footer/></Layout>
+<Layout title={`${entry.data.title} | Clash 中文网`} description={entry.data.description}><Header/><Main pageTitle={entry.data.title} class="app-prose"><Content/></Main><Footer/></Layout>

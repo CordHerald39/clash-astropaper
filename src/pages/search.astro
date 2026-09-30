@@ -66,8 +66,8 @@ const t = useTranslations(locale);
       // Display warning inn dev mode
       if (import.meta.env.DEV) {
         pageFindSearch.innerHTML = `
-            <div class="bg-muted/75 rounded p-4 space-y-4 mb-4">
-              <p><strong>DEV mode Warning! </strong>You need to build the project at least once to see the search results during development.</p>
+            <div class="search-notice">
+              <p><strong>搜索索引提示 </strong>开发模式需先构建站内搜索索引。</p>
               <code class="block bg-black text-white px-2 py-1 rounded">pnpm run build</code>
             </div>
           `;
@@ -131,34 +131,34 @@ const t = useTranslations(locale);
 
 <style is:global>
   #pagefind-search {
-    --pagefind-ui-font: var(--font-app);
-    --pagefind-ui-text: var(--foreground);
-    --pagefind-ui-background: var(--background);
-    --pagefind-ui-border: var(--border);
-    --pagefind-ui-primary: var(--accent);
-    --pagefind-ui-tag: var(--background);
+    --pagefind-ui-font: system-ui;
+    --pagefind-ui-text: #123744;
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border: #d6e5e9;
+    --pagefind-ui-primary: #0b7180;
+    --pagefind-ui-tag: #ffffff;
     --pagefind-ui-border-radius: 0.375rem;
     --pagefind-ui-border-width: 1px;
     --pagefind-ui-image-border-radius: 8px;
     --pagefind-ui-image-box-ratio: 3 / 2;
 
     form::before {
-      background-color: var(--foreground);
+      background-color: #123744;
     }
 
     input {
       font-weight: 400;
-      border: 1px solid var(--border);
+      border: 1px solid #d6e5e9;
     }
 
     input:focus-visible {
-      outline: 1px solid var(--accent);
+      outline: 1px solid #0b7180;
     }
 
     .pagefind-ui__result-title a {
-      color: var(--accent);
+      color: #0b7180;
       outline-offset: 1px;
-      outline-color: var(--accent);
+      outline-color: #0b7180;
       text-decoration-style: dashed;
       text-underline-offset: 4px;
     }

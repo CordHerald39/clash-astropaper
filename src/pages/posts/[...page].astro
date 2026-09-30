@@ -23,13 +23,13 @@ const locale = Astro.currentLocale ?? config.site.lang;
 const t = useTranslations(locale);
 ---
 
-<Layout title={`${t.pages.postsTitle} | ${config.site.title}`}>
+<Layout title={`${t.pages.postsTitle}${page.currentPage > 1 ? ` · 第 ${page.currentPage} 页` : ""} | ${config.site.title}`}>
   <Header />
 
   <Breadcrumb />
 
   <Main pageTitle={t.pages.postsTitle} pageDesc={t.pages.postsDesc}>
-    <ul>
+    <ul class="post-grid">
       {page.data.map(data => <Card {...data} />)}
     </ul>
   </Main>

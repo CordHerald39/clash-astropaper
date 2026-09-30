@@ -11,4 +11,4 @@ Clash 书签提供中文下载指引、配置教程与常见问题解答。软�
 
 ## 开源设计
 
-本站采用 [satnaing/astro-paper](https://github.com/satnaing/astro-paper) 的 AstroPaper 主题，保留其 MIT LICENSE。本站文章独立编写，网站并不代表所介绍客户端的开发团队。
+本站使用 Astro 构建，界面与响应式样式独立设计。沿用的 [AstroPaper 开源代码](https://github.com/satnaing/astro-paper) 保留 MIT LICENSE。本站文章独立编写，网站并不代表所介绍客户端的开发团队。

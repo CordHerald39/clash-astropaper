@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import AirportGuide from '../components/AirportGuide.astro';
+import {getAssetPath as url} from '../utils/withBase';
+---
+<Layout title="机场推荐与套餐对比 | Clash 中文网" description="机场订阅套餐、流量周期与优惠码来源比较，附选购清单、Clash 配置步骤及常见问题。"><Header/><main id="main-content"><div class="shell" style="padding-top:48px"><h1>机场推荐与套餐对比</h1><p>把付款条件和使用需求放在一起比较。</p></div><AirportGuide link={url} download="download/" tutorial="tutorials/"/></main><Footer/></Layout>

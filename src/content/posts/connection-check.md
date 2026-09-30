@@ -30,3 +30,5 @@ tags: ["故障排查"]
 准备求助时，记录客户端名称与版本、操作系统、失败时间、已尝试的单项对比。日志只保留必要片段，遮盖订阅令牌、节点密码和私人地址。修改前保存原配置，方便恢复。
 
 来源：[Clash Verge Rev 文档](https://clash-verge-rev.github.io/)与[Mihomo 文档](https://wiki.metacubex.one/)。可从[教程栏目](../../tutorials/)重新核对配置顺序。
+
+进一步阅读：[安卓显示 VPN 图标后，怎样确认 Clash 正在工作](../android-vpn-check/)。

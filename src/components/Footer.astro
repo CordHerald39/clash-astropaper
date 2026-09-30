@@ -1,5 +1,4 @@
 ---
-import {getAssetPath} from "@/utils/withBase";
-const {noMarginTop=false,...attrs}=Astro.props;
+import {getAssetPath as url} from "@/utils/withBase";
 ---
-<footer class="app-layout mt-auto border-border border-t py-6 text-sm" {...attrs}><nav class="flex flex-wrap gap-5" aria-label="页脚导航"><a href={getAssetPath("about/")}>关于本站</a><a href={getAssetPath("privacy/")}>隐私说明</a><a href={getAssetPath("rss.xml")}>RSS 订阅</a><a href="https://github.com/CordHerald39/clash-astropaper">网站仓库</a></nav><p class="mt-4">© {new Date().getFullYear()} Clash 书签 · 基于 <a href="https://github.com/satnaing/astro-paper">AstroPaper</a></p></footer>
+<footer class="site-foot"><div class="shell footer-grid"><div><a class="footer-brand" href={url('')}>Clash 中文网<span>↗</span></a><p>把常用入口收好，把配置步骤写清。</p></div><nav aria-label="页脚导航"><a href={url('about/')}>关于本站</a><a href={url('privacy/')}>隐私说明</a><a href={url('tags/')}>文章分类</a><a href={url('archives/')}>文章归档</a><a href={url('rss.xml')}>RSS 订阅</a></nav></div><div class="shell foot-note">© {new Date().getFullYear()} Clash 中文网 <span>来源可追溯 · 内容独立整理</span></div></footer>

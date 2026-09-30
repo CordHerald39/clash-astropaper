@@ -2,34 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import { useTranslations } from "@/i18n";
-import config from "@/config";
-
-const locale = Astro.currentLocale ?? config.site.lang;
-const t = useTranslations(locale);
+import Main from "@/components/Main.astro";
+import {getAssetPath as url} from "@/utils/withBase";
 ---
-
-<Layout title={`${t.notFound.title} | ${config.site.title}`}>
-  <Header />
-
-  <main
-    id="main-content"
-    class="app-layout my-1 flex flex-1 items-center justify-center"
-  >
-    <div class="mb-14 flex flex-col items-center justify-center">
-      <h1 class="text-accent text-9xl font-bold">404</h1>
-      <span aria-hidden="true"> ¯\_(ツ)_/¯ </span>
-      <p class="mt-4 text-2xl sm:text-3xl">{t.notFound.message}</p>
-      <LinkButton
-        href={getRelativeLocaleUrl(locale, "")}
-        class="my-6 text-lg underline decoration-dashed underline-offset-8"
-      >
-        {t.notFound.goHome}
-      </LinkButton>
-    </div>
-  </main>
-
-  <Footer />
-</Layout>
+<Layout title="页面未找到 | Clash 中文网" description="这条地址没有对应页面，可以返回首页或浏览文章。"><Header/><Main pageTitle="这枚书签没有找到。" pageDesc="检查一下网址，或从下方入口继续。"><a class="button primary" href={url('')}>返回首页 ↗</a><a class="button dark" href={url('posts/')}>浏览文章</a></Main><Footer/></Layout>

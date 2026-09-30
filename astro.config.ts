@@ -3,7 +3,7 @@ import {
   envField,
   svgoOptimizer,
 } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
+
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { unified } from "@astrojs/markdown-remark";
@@ -20,7 +20,7 @@ import config from "./astro-paper.config";
 
 export default defineConfig({
   site: config.site.url,
-  base: process.env.BASE_PATH ?? "/clash-astropaper/",
+  base: process.env.BASE_PATH ?? "/",
   trailingSlash: "always",
   integrations: [
     mdx(),
@@ -57,7 +57,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [],
   },
   env: {
     schema: {

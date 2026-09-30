@@ -1,6 +1,6 @@
 import {readFile,readdir,stat,mkdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
-const root=path.resolve('dist'),base=process.env.BASE_PATH??'/clash-astropaper/';
+const root=path.resolve('dist'),base=process.env.BASE_PATH??'/';
 const files=[];async function walk(d){for(const e of await readdir(d,{withFileTypes:true})){const p=path.join(d,e.name);if(e.isDirectory())await walk(p);else if(p.endsWith('.html'))files.push(p);}}await walk(root);
 const errors=[],seen={title:new Set(),description:new Set()},pages=[];
 for(const f of files){const html=await readFile(f,'utf8'),name=path.relative(root,f).replaceAll(path.sep,'/');
