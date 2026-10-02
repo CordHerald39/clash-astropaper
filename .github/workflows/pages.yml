@@ -27,8 +27,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://cordherald39.github.io' }}
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+          SITE_URL: https://clashzhinan.com.cn
+          BASE_PATH: '/'
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
